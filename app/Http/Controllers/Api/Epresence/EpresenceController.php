@@ -46,7 +46,7 @@ class EpresenceController extends Controller
             return response()->json([
                 'error' => false,
                 'message' => 'successfully save data',
-                'data' => new EpresenceResource($insert)
+                'data' => $insert
             ], 200);
         } catch (\Throwable $th) {
             return response()->json([
@@ -72,7 +72,7 @@ class EpresenceController extends Controller
         return response()->json([
             'error' => false,
             'message' => 'success',
-            'data' => new EpresenceResource($data)
+            'data' => $data
         ],200);
     }
 
